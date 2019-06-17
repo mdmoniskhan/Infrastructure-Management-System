@@ -11,7 +11,7 @@ public class DB {
     static{
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/IMS?autoReconnect=true&useSSL=false","root","123456789");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/IMS?autoReconnect=true&useSSL=false","root","12345678");
             st=con.createStatement();
             complain = con.prepareStatement("insert into complain_info (ctype,sid,sname,loc,remarks,status) values (?,?,?,?,?,?)");
             aprove = con.prepareStatement("update complain_info set status=? where cid=?");
